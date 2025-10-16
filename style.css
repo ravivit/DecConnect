@@ -345,6 +345,26 @@ button:hover {
 .project-card a:hover {
   text-decoration: underline;
 }
+/* ================== MOBILE RESPONSIVE ================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column; /* Navbar vertical on mobile */
+  }
+
+  .container, .project-card {
+    width: 100%; /* Full width mobile */
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
