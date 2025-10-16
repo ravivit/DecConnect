@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevConnect Bharat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h1>DevConnect Bharat</h1>
+  <ul>
+    <li onclick="showSection('login')">Login</li>
+    <li onclick="showSection('feed')">Feed</li>
+    <li onclick="showSection('projects')">Projects</li>
+    <li onclick="showSection('workshops')">Workshops</li>
+    <li onclick="showSection('profile')">Profile</li>
+  </ul>
+</nav>
+
+<!-- Login Section -->
+<section id="login" class="section active">
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username or Email">
+    <input type="password" placeholder="Password">
+    <button onclick="alert('Logged In!')">Login</button>
+    <p><a href="#" onclick="showForgot()">Forgot Password?</a></p>
+    <p>New here? <a href="#" onclick="showSignup()">Sign Up</a></p>
+  </div>
+
+  <div id="signup-box" class="hidden">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="alert('Signed Up!')">Sign Up</button>
+    <p><a href="#" onclick="hideSignup()">Back to Login</a></p>
+  </div>
+
+  <div id="forgot-box" class="hidden">
+    <h2>Forgot Password</h2>
+    <input type="email" placeholder="Enter Email">
+    <button onclick="alert('Reset link sent!')">Send Reset Link</button>
+    <p><a href="#" onclick="hideForgot()">Back to Login</a></p>
+  </div>
+</section>
+
+<!-- Feed Section -->
+<section id="feed" class="section">
+  <h2>Community Feed</h2>
+  <div class="feed-wrapper">
+
+    <!-- Feed Posts -->
+    <div class="feed-container" id="feed-container"></div>   
+
+    <!-- Sidebar -->
+    <div class="side-panels">
+      <div class="notifications">
+        <h3>Notifications</h3>
+        <ul id="notification-list">
+          <li>No new notifications</li>
+        </ul>
+      </div>
+      <div class="messages">
+        <h3>Messages</h3>
+        <ul id="message-list">
+          <li>No new messages</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div id="project-list"></div>
+  </section>
+
+
+<!-- Workshops Section -->
+<section id="workshops" class="section">
+  <h2>Workshops</h2>
+  <div id="workshop-list"></div>
+</section>
+
+<!-- Profile Section -->
+<section id="profile" class="section">
+  <h2>Your Profile</h2>
+  <div class="upload-section">
+    <img id="previewImg" src="https://via.placeholder.com/120" alt="Profile Picture">
+    <input type="file" id="uploadPic" accept="image/*">
+    <label for="uploadPic" class="upload-btn">Upload Picture</label>
+  </div>
+  <form id="profileForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="college" placeholder="College Name" required>
+    <input type="number" id="age" placeholder="Your Age" required>
+    <input type="url" id="leetcode" placeholder="LeetCode URL" required>
+    <input type="url" id="linkedin" placeholder="LinkedIn URL" required>
+    <input type="url" id="github" placeholder="GitHub URL" required>
+    <button type="submit">Save</button>
+  </form>
+  <div id="profileDisplay" class="hidden"></div>
+</section>
+
+<footer>
+  <p>© 2025 DevConnect Bharat | 💜 for Developers</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
